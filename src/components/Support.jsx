@@ -1,63 +1,31 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import "./Landing.css";
 import { Link } from "react-router-dom"
 
-// import $ from "jquery";
-// import 'jquery-ui-dist/jquery-ui'
-// import '../jsFiles/moment.jsx'
 
-const Landing = () => {
-
-
-
+const Support = () => {
     return (
-        <div ng-cloak layout="column" ng-controller="AppCtrl" >
+        <div ng-cloak layout="column" ng-controller="AppCtrl">
+            {/* <!-- Wrapper --> */}
             <div id="wrapper">
-
-                {/* Main  */}
+                {/* <!-- Main --> */}
                 <div id="main">
                     {/* <!-- Header --> */}
+                    <div className="container-fluid top_stats"><div className="row">
 
-                    {/* <!-- Started Desktop Hashrates --> */}
-                    <div className="container-fluid top_stats hide_hashrates">
-                        <div className="row">
-
-                            <div className="col-md-8 col-sm-12">
-                                <span>Network: </span>
-                                <span>Pool: </span>
-                                <span>You: </span>
-                                <span>XMR: </span>
-                            </div>
-                            <div className="col-md-4 col-sm-12">
-                                {/* <a href="getting-started.html" className="btn_blue">Getting Started</a> */}
-                                <Link to={`/gettingstarted`} className="btn_blue">Getting Started</Link>
-                                {/* <a href="login.html" className="btn_orange" ng-if="!isLoggedIn()">Login</a> */}
-                                {/* <a href="login.html" className="btn_orange" ng-if="isLoggedIn()">Logout</a> */}
-                            </div>
+                        <div className="col-md-8 col-sm-12">
+                            <span>Network: <strong>2788.5 MH/s</strong></span>
+                            <span>Pool:<strong> 1 GH/s</strong></span>
+                            <span>You: <strong>2.4 MH/s</strong></span>
+                            <span>XMR:<strong> 260$</strong></span></div>
+                        <div className="col-md-4 col-sm-12">
+                            <a href="getting-started.html" className="btn_blue">Getting Started</a>
+                            <a href="login.html" className="btn_orange" ng-if="!isLoggedIn()">Login</a>
+                            {/* <a href="login.html" className="btn_orange" ng-if="isLoggedIn()">Logout</a> */}
                         </div>
-                    </div>
-                    {/* <!-- Ended Desktop Hashrates --> */}
-
-                    {/* <!-- Started Mobile Hashrates --> */}
-                    <div className="container-fluid top_stats show_hashrates">
-                        <div className="row">
-
-                            <div className="col-sm-6">
-                                <div className="logo">
-                                    <Link to={`/`}> <img src="assets/images/logo.jpg" alt="" /></Link>
-                                </div>
-                            </div>
-                            <div className="col-sm-3"><Link to={`/gettingstarted`} className="btn_blue">Getting Started</Link> <a href="#"
-                                className="btn_orange">Login</a></div>
-
-
-                        </div>
-                    </div>
-                    {/* <!-- Ended Mobile Hashrates --> */}
-
-                    {/* <!-- Desktop Banner --> */}
-                    <section className="main-banner hide_slider">
-
+                    </div></div>
+                    {/* <!-- Banner --> */}
+                    <section className="main-banner">
                         <div className="container-fluid">
                             <div className="row">
                                 <div className="col-md-12">
@@ -78,60 +46,35 @@ const Landing = () => {
                                                     <div className="row">
 
                                                         <div className="col-12">
-                                                            <div className="content_wrapper slider1">
-                                                                <h1>Why you should </h1>
-                                                                <h2>mine Monero?</h2>
-                                                                <ul>
-                                                                    <li>No expensive graphic cards required, CPUs are enough.</li>
-                                                                    <li>Established and big community since 2014</li>
-                                                                </ul>
-                                                            </div>
+                                                            <div className="content_wrapper slider1"><h1>Why you should </h1><h2>mine Monero?</h2><ul><li>No expensive graphic cards required, CPUs are enough.</li><li>Established and big community since 2014</li></ul></div>
 
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-
 
                                             <div className="carousel-item">
                                                 <div className="container-fluid">
                                                     <div className="row">
 
                                                         <div className="col-12">
-                                                            <div className="content_wrapper slider2">
-                                                                <ul>
-                                                                    <li>Earning points for voucher codes</li>
-                                                                    <li>Auto-Payment (Hourly)</li>
-                                                                    <li>Low Payout-Limit with 0.01 XMR</li>
-                                                                    <li>Low Pool Fee 0.5%</li>
-                                                                </ul>
-                                                            </div>
-
+                                                            <div className="content_wrapper slider2"><ul><li>Earning points for voucher codes</li><li>Auto-Payment (Hourly)</li><li>Low Payout-Limit with 0.01 XMR</li><li>Low Pool Fee 0.5%</li></ul></div>
                                                         </div>
                                                     </div>
                                                 </div>
-
                                             </div>
 
                                             <div className="carousel-item">
                                                 <div className="container-fluid">
                                                     <div className="row">
-
                                                         <div className="col-12">
                                                             <div className="content_wrapper slider3">
-                                                                <div className="content_slide3"><img src="assets/images/icon1.png" /><span>Redeem your
-                                                                    points</span>
-                                                                    <p>in numerous online-shops</p>
-                                                                </div>
-                                                                <div className="content_slide3"><img src="assets/images/icon2.png" /><span>Boost your hashrate
-                                                                </span>
-                                                                    <p>And Buy new hardware with your voucher</p>
-                                                                </div>
+                                                                <div className="content_slide3"><img src="assets/images/icon1.png"/><span>Redeem your points</span><p>in numerous online-shops</p></div>
+                                                                <div className="content_slide3"><img src="assets/images/icon2.png"/><span>Boost your hashrate </span><p>And Buy new hardware with your voucher</p></div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-
                                             </div>
 
 
@@ -146,63 +89,12 @@ const Landing = () => {
                                         </a>
 
                                     </div>
-
                                     {/* <!-- end slider --> */}
 
                                 </div>
                             </div>
-
                         </div>
                     </section>
-
-
-                    {/* <!-- Show mobile Banner --> */}
-                    <section className="main-banner show_banner">
-
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <div>
-                                        <h1>Why you should</h1>
-                                        <h2>Mine Monero?</h2>
-                                        <p>No expensive graphic cards required, CPUs are enough.
-                                            Established and big community since 2014</p>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div className="container-fluid hashrates">
-                            <div className="row">
-                                <div className="col-md-12">
-
-                                    <table>
-                                        <tr>
-                                            <td>
-                                                <div className="values"><span>Network:</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div className="values"><span>Pool: </span></div>
-                                            </td>
-                                            <td>
-                                                <div className="values"><span>You:</span></div>
-                                            </td>
-                                            <td>
-                                                <div className="values"><span>XMR: </span></div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </section>
-
-                    {/* <!-- End mobile Banner --> */}
 
                     <div className="inner">
 
@@ -210,9 +102,8 @@ const Landing = () => {
                         <section className="container-fluid">
                             <div className="row">
                                 <div className="col-12 headings">
-                                    <sup>xmrminerpro</sup>
-                                    <h2>Benefits</h2>
-                                    <p>The easiest, most affordable and best mining platform</p>
+
+                                    <sup>xmrminerpro</sup><h2>Benefits</h2><p>The easiest, most affordable and best mining platform</p>
                                 </div>
                             </div>
                         </section>
@@ -245,13 +136,11 @@ const Landing = () => {
                             </div>
                         </section>
 
-
                         {/* <!-- Mining Pool --> */}
                         <section className="container-fluid">
                             <div className="row">
                                 <div className="col-12 headings">
-                                    <sup>xmrminerpro</sup>
-                                    <h2>Mining Pool</h2>
+                                    <sup>xmrminerpro</sup><h2>Mining Pool</h2>
                                 </div>
                             </div>
                         </section>
@@ -279,25 +168,18 @@ const Landing = () => {
                                             <p><strong>PPLNS</strong></p>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </section>
-
                     </div>
 
                     {/* <!-- About Mining --> */}
                     <div className="container-fluid about_mining">
                         <div className="row">
-                            <div className="col-md-6 col-sm-12"><sup>What is crypto ?</sup>
-                                <p>Monero is one of the established cryptocurrencies, which has a focus on secure and private transactions.
-                                </p>
-                                <p></p>
-                            </div>
+                            <div className="col-md-6 col-sm-12"><sup>Decentralized</sup><h2>Minning Our core focus</h2><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.Lorem ipsum dolor sit amet, has at lorem utin mucius, elitro dicam sit malorum. Fugit convenire adhuc putant eam. scripta iudicabit, dicit le persius ponderum id nec.</p>
+                                <p>Lorem ipsum dolor sit amet, has at lorem utin mucius, elitro dicam sit malorum. Fugit convenire adhuc putant eam. scripta iudicabit, dicit le persius ponderum id nec.</p></div>
                             <div className="col-md-6 col-sm-12"><img src="assets/images/cryp_currency_collage.jpg" alt="" /></div>
                         </div>
-
-
                     </div>
 
                     <div className="inner">
@@ -306,9 +188,7 @@ const Landing = () => {
                         <section className="container-fluid">
                             <div className="row">
                                 <div className="col-12 headings">
-                                    <sup>xmrminerpro</sup>
-                                    <h2>Crypto News</h2>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                                    <sup>xmrminerpro</sup><h2>Crypto News</h2><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
                                 </div>
                             </div>
                         </section>
@@ -319,10 +199,7 @@ const Landing = () => {
                                         <div className="news-item first-item">
 
                                             <div className="date_wrapper">
-                                                <div className="day">02</div>
-                                                <div className="mm">May 2022</div>
-                                            </div>
-                                            <h4>Chainges Conference</h4>
+                                                <div className="day">02</div> <div className="mm">May 2022</div></div><h4>Chainges Conference</h4>
                                             <p>Join the first world-className quality blockchain and cryptocurrencyconference</p>
                                             <a href="#" className="btn_readmore">Read More</a>
                                         </div>
@@ -331,10 +208,7 @@ const Landing = () => {
                                         <div className="news-item first-item">
 
                                             <div className="date_wrapper">
-                                                <div className="day">03</div>
-                                                <div className="mm">May 2022</div>
-                                            </div>
-                                            <h4>Chainges Conference</h4>
+                                                <div className="day">03</div> <div className="mm">May 2022</div></div><h4>Chainges Conference</h4>
                                             <p>Join the first world-className quality blockchain and cryptocurrencyconference</p>
                                             <a href="#" className="btn_readmore">Read More</a>
                                         </div>
@@ -343,23 +217,17 @@ const Landing = () => {
                                         <div className="news-item first-item">
 
                                             <div className="date_wrapper">
-                                                <div className="day">22</div>
-                                                <div className="mm">May 2022</div>
-                                            </div>
-                                            <h4>Chainges Conference</h4>
+                                                <div className="day">22</div> <div className="mm">May 2022</div></div><h4>Chainges Conference</h4>
                                             <p>Join the first world-className quality blockchain and cryptocurrencyconference</p>
                                             <a href="#" className="btn_readmore">Read More</a>
                                         </div>
                                     </div>
-
-
                                 </div>
                             </div>
                         </section>
                     </div>
 
                 </div>
-
 
                 {/* <!-- Sidebar --> */}
                 <div id="sidebar">
@@ -368,8 +236,8 @@ const Landing = () => {
 
                         {/* <!-- Logo --> */}
 
-                        <div className="logo hide_logo">
-                            <a href="#"> <img src="assets/images/logo.jpg" alt="" /></a>
+                        <div className="logo">
+                            <a href="index.html"> <img src="assets/images/logo.jpg" alt="" /></a>
                         </div>
 
                         {/* <!-- Menu --> */}
@@ -389,8 +257,8 @@ const Landing = () => {
                             <footer id="footer">
                                 <p className="copyright">Copyright &copy; 2021 XMRMINERPRO</p>
                             </footer>
-                        </div>
-                    </div>
+
+                        </div></div>
                 </div>
             </div>
 
@@ -398,4 +266,4 @@ const Landing = () => {
     )
 }
 
-export default Landing
+export default Support
