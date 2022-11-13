@@ -44,7 +44,7 @@ const Landing = () => {
 
                             <div className="col-sm-6">
                                 <div className="logo">
-                                    <Link to={`/`}> <img src="assets/images/logo.jpg" alt="" /></Link>
+                                    <Link to={`/`}> <img src="../assets/images/logo.jpg" alt="" /></Link>
                                 </div>
                             </div>
                             <div className="col-sm-3"><Link to={`/gettingstarted`} className="btn_blue">Getting Started</Link> <a href="#"
@@ -119,11 +119,11 @@ const Landing = () => {
 
                                                         <div className="col-12">
                                                             <div className="content_wrapper slider3">
-                                                                <div className="content_slide3"><img src="assets/images/icon1.png" /><span>Redeem your
+                                                                <div className="content_slide3"><img src="src\assets\images\icon1.png" /><span>Redeem your
                                                                     points</span>
                                                                     <p>in numerous online-shops</p>
                                                                 </div>
-                                                                <div className="content_slide3"><img src="assets/images/icon2.png" /><span>Boost your hashrate
+                                                                <div className="content_slide3"><img src="src\assets\images\icon2.png" /><span>Boost your hashrate
                                                                 </span>
                                                                     <p>And Buy new hardware with your voucher</p>
                                                                 </div>
